@@ -43,7 +43,7 @@ public class CoursesController {
 	@RequestMapping(value = "/queryCoursesByClassify", method = RequestMethod.GET)
 	public String queryCoursesByClassify(Model model) {
 		List<String> classifies = courseService.getClassifiesLists();
-		int[] classifyGrade = courseService.getCoursesByClassify(classifies);
+		int[] classifyGrade = courseService.getTotalGradeByClassify(classifies);
 		int totalGrade = 0;
 		for (int i = 0; i < classifyGrade.length; i++)
 			totalGrade += classifyGrade[i];

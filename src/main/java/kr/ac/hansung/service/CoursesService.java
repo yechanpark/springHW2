@@ -46,7 +46,7 @@ public class CoursesService {
 	}
 
 	// 구분별 조회
-	public int[] getCoursesByClassify(List<String> classifies) {
+	public int[] getTotalGradeByClassify(List<String> classifies) {
 		int[] totalGrade = new int[classifies.size()];
 		for (int i = 0; i < classifies.size(); i++) {
 			totalGrade[i] = courseDao.getTotalGradeByClassify(classifies.get(i));

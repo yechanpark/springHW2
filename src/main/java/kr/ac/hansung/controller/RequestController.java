@@ -35,7 +35,7 @@ public class RequestController {
 
 	// 수강신청 실행
 	@RequestMapping(value = "/doRequestCourse")
-	public String dorequestCourse(Model model, String courseID) {
+	public String doRequestCourse(Model model, String courseID) {
 		// 이미 들었던 과목이면
 		if (coursesService.isListenedCourse(courseID))
 			return "alreadyListened";

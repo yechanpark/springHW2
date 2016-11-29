@@ -42,18 +42,6 @@ public class CourseDAO {
 		return jdbcTemplateObject.queryForObject(sqlStatement, new Object[] { classify }, Integer.class);
 	}
 
-	// 현재까지 수강한 모든 과목 갯수
-	public int getRowCount() {
-		String sqlStatement = "select count(*) from course";
-		return jdbcTemplateObject.queryForObject(sqlStatement, Integer.class);
-	}
-
-	// 모든 수강했던 과목 조회
-	public List<Course> getCourses() {
-		String sqlStatement = "select * from course order by year, semester";
-		return jdbcTemplateObject.query(sqlStatement, new CourseMapper());
-	}
-
 	// xxxx학년도 x학기에 수강한 과목 쿼리
 	public List<Course> getCourses(int year, int semester) {
 		String sqlStatement = "select * from course where year=? and semester=?";
