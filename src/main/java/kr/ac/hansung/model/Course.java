@@ -2,7 +2,7 @@ package kr.ac.hansung.model;
 
 public class Course {
 
-	// 수갈년도
+	// 수강년도
 	private int year;
 	// 학기
 	private int semester;
